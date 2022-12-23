@@ -21,18 +21,20 @@ The data was prepped for analysis by checking for duplicated rows and missing en
 #### Numerical Features
 - Plotted as a histogram to btter understand their distribution. 
 - Plotted as a correlation heatmap to understand any correlations to other features and to the target
-> The image below shows the distribution to the item's visibility. From this histogram, it was observed that this feature is very left-skewed and most items appear to have very little visibility. 
+
 ![sample image](Item_Visibility_histogram.png)
+> The image above shows the distribution to the item's visibility. From this histogram, it was observed that this feature is very left-skewed and most items appear to have very little visibility. 
 
 #### Categorical Features
 - Plotted as multivariate boxplots with respect to the Item_Outlet_Sales. This gave some insight as to which features could be useful in our model. 
 - Plotted as frequency bar plots. This gave some insight as to which categories were most common in each feature.
-> The image below shows one of the multivariate boxplots with the variables of Outlet_Identifier and Item_Outlet_Sales. From this, it's clear that certain outlets have much larger item sales than others. 
+
 ![sample image](Outlet_Identifier_boxplot.png)
+> The image above shows one of the multivariate boxplots with the variables of Outlet_Identifier and Item_Outlet_Sales. From this, it's clear that certain outlets have much larger item sales than others. 
 
 ### Explanatory Data Analysis
-> The highest correlated feature to the item outlet sales was the item's maximum retail price as shown in the plot below 
 ![sample image](mrp_sales.png)
+> The highest correlated feature to the item outlet sales was the item's maximum retail price as shown in the plot below 
 
 ## Machine Learning
 The following modeling techniques were used:
@@ -52,9 +54,9 @@ The following modeling techniques were used:
 ### Tuned Decision Regression Tree (max depth = 5)
 - The R-squared value for the train and test sets are 0.6039 and 0.5947
 - The RMSE value for the train and test sets are 1082.66 and 1057.42
-> The optimal depth according to the R-squared value for the test set was found to be 5, as shown in the figure. 
-![sample image](r-squared_modelDepth.png)
 
+![sample image](r-squared_modelDepth.png)
+> The optimal depth according to the R-squared value for the test set was found to be 5, as shown in the figure. 
 
 
 ## Model Recommendations:
