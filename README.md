@@ -1,5 +1,5 @@
 # Food Item Sales
-## Analysis and modeling of food item sales
+## Analysis and prediction of food item sales across outlets
 
 **Author**: Jackson Muehlbauer
 
@@ -34,36 +34,47 @@ The data was prepped for analysis by checking for duplicated rows and missing en
 > The highest correlated feature to the item outlet sales was the item's maximum retail price as shown in the plot below 
 ![sample image](mrp_sales.png)
 
-## Results
+## Machine Learning
+The following modeling techniques were used:
+- Linear Regression
+- Single Decision Tree
+
+*Note: Prior to running these models, ordinal features were ordinally encoded, nominal feature were imputed with the most frequent category and one hot encoded, and numerical features were imputed with the mean and scaled with standard scaling. 
+
+### Linear Regression
+- The R-squared value for the train and test sets are 0.5601 and 0.5685, respectively.
+- The root mean squared error value for the train sets and test are 1141.03 and 1091.05, respectively.
+
+### Default (pre-tuning) Decision Regression Tree
+- The R-squared value for the train and test sets are 1.0 and 0.1944, respectively.
+- RMSE was not calculated prior to tuning.
+
+### Tuned Decision Regression Tree (max depth = 5)
+- The R-squared value for the train and test sets are 0.6039 and 0.5947
+- The RMSE value for the train and test sets are 1082.66 and 1057.42
+> The optimal depth according to the R-squared value for the test set was found to be 5, as shown in the figure. 
+![sample image](r-squared_modelDepth.png)
 
 
-
-## Model
-
-Describe your final model
-
-Report the most important metrics
-
-Refer to the metrics to describe how well the model would solve the business problem
 
 ## Model Recommendations:
 
-The recommended model is the decision regression tree over the linear regression.
+The recommended model is the tuned decision regression tree over the linear regression.
 
 Overall, the single decision regression tree performed slightly better than the linear regression in both R-squared and RMSE calculated from the test set.
 
 The test set R-squared for the single decision tree was 0.5947 while the same metric for the linear regression model was 0.5685. The higher value for decision tree indicates that the model better can better explain the variance in the item outlet sales with the available features.
 
-The test set RMSE for the decision tree was $1057.42, the same metric for the linear regression was $1091.05. These are very close in value but there is still a slight edge for the decision tree. Overall, the decision tree predicts with slightly lower residuals.
+The test set RMSE for the decision tree was $1057.42, the same metric for the linear regression was $1091.05. These are very close in value but there is still a slight edge for the decision tree. Overall, the decision tree predicts with slightly lower residuals (when punishing large error predictions)
 
 
 ## Limitations & Next Steps
 
-As stated previously, this single decision regression tree is far from perfect; the low R-squared values for both the train and test data shows that this model has high bias. The RMSE values also show that there is a large amount of error in this model, especially when compared to the average item outlet sales. 
+As stated previously, this single decision regression tree is far from perfect; the low R-squared values for both the train and test data shows that this model has high bias. The RMSE values also show that the model makes predictions with large residuals, especially when compared to the average item outlet sales. The interested parties should be aware of the limitations of this model and leave room for some error. 
 
 The next steps in obtaining a better model would be to try a random forest model on the data. This should improve the performance metrics as this model bootstraps, aggregates, and randomizes the allowable features in the decision tree. From the correlation heat map, only one numeric term was even moderately correlated to the item outlet sales. By randomizing the available features, there could exist some additional predictive power from the other features.
 
-To improve the model even further, additional features could be measured and recorded. In theory, having more (useful) information to describe the target should improve the predictive capability of the model. For example, "organic" could be added as a feature to describe if the item is organic or conventional. That said, there is no guarentee that additional features will improvement the model
+To improve the model even further, additional features could be measured and recorded. In theory, having more "useful" information to describe the target should improve the predictive capability of the model. For example, "organic" could be added as a feature to describe if the item is organic or conventional. That said, there is no guarentee that additional features will improve the model
 
 ### For further information
 
