@@ -11,7 +11,6 @@ From both the perspective of a wholesale food supplier and a retail food seller,
 ### Data:
 The raw data contained 8523 entries and 12 columns. The column names and descriptions are displayed in dictionary below.
 #### Data Dictionary:
-![sample image](outlet_sales_dict.png)
 <img src="outlet_sales_dict.png" width=50% height=50%>
 
 
