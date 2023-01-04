@@ -32,10 +32,10 @@ The data was prepped for analysis by checking for duplicated rows and missing en
 > The image above shows the counts for each item type. From this, it was noticed that certain types, like fruits and vegetables, are much more ubiquitous  than other types, like seafood. This may indicate that not all stores carry the less common item types, or that there is a larger variety of fruits and vegetables than seafood.
 
 ### Explanatory Data Analysis
-- After the exploratory analysis, figures were made to show the most highly correlated features with respect to the Item_Outlet_Sales and some other interesting insights provided by the features.
+- After the exploratory analysis, figures were made to show the most highly correlated features with respect to the Item_Outlet_Sales and some other interesting insights provided by the features, see the figure below for an example. 
 
 ![sample image](Outlet_Type_Bars.png)
-> Interpretation:
+> **Interpretation:**
 Subplot 1: Supermarket Type3 has the highest average item outlet sales. This indicates that this outlet type sells a higher volume of a given item than the other outlet types. Likewise, Grocery stores sell the lowest volume of any given item.
 Subplot 2: Supermarket Type1 has the highest total sales. From subplot 1, we know that the Supermarket Type3 has the highest average item sale, which suggests that Supermarket Type1 has the highest number of unique items.
 Subplot 3: Supermarket Type1 has the highest number of estimated sales (assuming items were sold at the Maximum Sale Price).
@@ -69,7 +69,7 @@ The recommended model is the tuned decision regression tree over the linear regr
 
 Overall, the single decision regression tree performed slightly better than the linear regression in both R-squared and RMSE calculated from the test set.
 
-The test set R-squared for the single decision tree was 0.5947 while the same metric for the linear regression model was 0.5685. The higher value for decision tree indicates that the model better can better explain the variance in the item outlet sales with the available features.
+The test set R-squared for the single decision tree was 0.5947 while the same metric for the linear regression model was 0.5685. The higher value for decision tree indicates that the model can better explain the variance in the item outlet sales with the available features.
 
 The test set RMSE for the decision tree was $1057.42, the same metric for the linear regression was $1091.05. These are very close in value but there is still a slight edge for the decision tree. Overall, the decision tree predicts with slightly lower residuals (when punishing large error predictions)
 
@@ -78,7 +78,7 @@ The test set RMSE for the decision tree was $1057.42, the same metric for the li
 
 As stated previously, this single decision regression tree is far from perfect; the low R-squared values for both the train and test data shows that this model has high bias. The RMSE values also show that the model makes predictions with large residuals, especially when compared to the average item outlet sales. The interested parties should be aware of the limitations of this model and leave room for some error. 
 
-The next steps in obtaining a better model would be to try a random forest model on the data. This should improve the performance metrics as this model bootstraps, aggregates, and randomizes the allowable features in the decision tree. From the correlation heat map, only one numeric term was even moderately correlated to the item outlet sales. By randomizing the available features, there could exist some additional predictive power from the other features.
+The next steps in obtaining a better model would be to try a random forest model on the data. This should improve the performance metrics as this technique bootstraps, aggregates, and randomizes the allowable features in the decision tree. From the correlation heat map, only one numeric term was even moderately correlated to the item outlet sales. By randomizing the available features, there could exist some additional predictive power from the other features.
 
 To improve the model even further, additional features could be measured and recorded. In theory, having more "useful" information to describe the target should improve the predictive capability of the model. For example, "organic" could be added as a feature to describe if the item is organic or conventional. That said, there is no guarentee that additional features will improve the model
 
