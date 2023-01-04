@@ -60,8 +60,6 @@ The following modeling techniques were used:
 - The R-squared value for the train and test sets are 0.6039 and 0.5947
 - The RMSE value for the train and test sets are 1082.66 and 1057.42
 
-![sample image](r-squared_modelDepth.png)
-> The optimal depth according to the R-squared value for the test set was found to be 5, as shown in the figure. 
 
 
 ## Model Recommendations:
