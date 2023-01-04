@@ -32,7 +32,7 @@ The data was prepped for analysis by checking for duplicated rows and missing en
 > The image above shows the counts for each item type. From this, it was noticed that certain types, like fruits and vegetables, are much more ubiquitous  than other types, like seafood. This may indicate that not all stores carry the less common item types, or that there is a larger variety of fruits and vegetables than seafood.
 
 ### Explanatory Data Analysis
-- After the exploratory analysis, figures were made to show the most highly correlated features with respect to the Item_Outlet_Sales and some other interesting insights provided by the features, see the figure below for an example. 
+- After the exploratory analysis, figures were made to show the most highly correlated features with respect to the Item_Outlet_Sales as well as some other interesting insights provided by the features, see the figure below for example. 
 
 <img src="Outlet_Type_Bars.png" width=65% height=65%>
 
