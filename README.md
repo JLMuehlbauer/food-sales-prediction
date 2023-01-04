@@ -34,8 +34,7 @@ The data was prepped for analysis by checking for duplicated rows and missing en
 ### Explanatory Data Analysis
 - After the exploratory analysis, figures were made to show the most highly correlated features with respect to the Item_Outlet_Sales and some other interesting insights provided by the features, see the figure below for an example. 
 
-![sample image](Outlet_Type_Bars.png | width=100)
-![](https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png | width=100)
+![sample image](Outlet_Type_Bars.png)
 
 > **Interpretation:**
 Subplot 1: Supermarket Type3 has the highest average item outlet sales. This indicates that this outlet type sells a higher volume of a given item than the other outlet types. Likewise, Grocery stores sell the lowest volume of any given item.
