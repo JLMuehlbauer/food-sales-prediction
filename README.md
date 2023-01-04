@@ -28,13 +28,17 @@ The data was prepped for analysis by checking for duplicated rows and missing en
 #### Categorical Features
 - Plotted as multivariate boxplots with respect to the Item_Outlet_Sales. This gave some insight as to which features could be useful in our model. 
 - Plotted as frequency bar plots. This gave some insight as to which categories were most common in each feature.
-
-![sample image](Outlet_Identifier_boxplot.png)
-> The image above shows one of the multivariate boxplots with the variables of Outlet_Identifier and Item_Outlet_Sales. From this, it's clear that certain outlets have much larger item sales than others. 
+![sample image](Item_Type_Bar.png)
+> The image above shows the counts for each item type. From this, it was noticed that certain types, like fruits and vegetables, are much more ubiquitous  than other types, like seafood. This may indicate that not all stores carry the less common item types, or that there is a larger variety of fruits and vegetables than seafood.
 
 ### Explanatory Data Analysis
-![sample image](mrp_sales.png)
-> The highest correlated feature to the item outlet sales was the item's maximum retail price as shown in the plot below 
+- After the exploratory analysis, figures were made to show the most highly correlated features with respect to the Item_Outlet_Sales and some other interesting insights provided by the features.
+
+![sample image](Outlet_Type_Bars.png)
+> Interpretation:
+Subplot 1: Supermarket Type3 has the highest average item outlet sales. This indicates that this outlet type sells a higher volume of a given item than the other outlet types. Likewise, Grocery stores sell the lowest volume of any given item.
+Subplot 2: Supermarket Type1 has the highest total sales. From subplot 1, we know that the Supermarket Type3 has the highest average item sale, which suggests that Supermarket Type1 has the highest number of unique items.
+Subplot 3: Supermarket Type1 has the highest number of estimated sales (assuming items were sold at the Maximum Sale Price).
 
 ## Machine Learning
 The following modeling techniques were used:
