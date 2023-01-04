@@ -19,7 +19,7 @@ The data was prepped for analysis by checking for duplicated rows and missing en
 
 ### Exploratory Data Analysis
 #### Numerical Features
-- Plotted as a histogram to btter understand their distribution. 
+- Plotted as a histogram to better understand their distribution. 
 - Plotted as a correlation heatmap to understand any correlations to other features and to the target
 
 ![sample image](Item_Visibility_histogram.png)
