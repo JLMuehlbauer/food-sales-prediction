@@ -12,6 +12,7 @@ From both the perspective of a wholesale food supplier and a retail food seller,
 The raw data contained 8523 entries and 12 columns. The column names and descriptions are displayed in dictionary below.
 #### Data Dictionary:
 ![sample image](outlet_sales_dict.png)
+<img src="outlet_sales_dict.png" width=50% height=50%>
 
 
 ## Methods
@@ -34,8 +35,7 @@ The data was prepped for analysis by checking for duplicated rows and missing en
 ### Explanatory Data Analysis
 - After the exploratory analysis, figures were made to show the most highly correlated features with respect to the Item_Outlet_Sales and some other interesting insights provided by the features, see the figure below for an example. 
 
-![sample image](Outlet_Type_Bars.png)
-<img src="Outlet_Type_Bars.png" width=50% height=50%>
+<img src="Outlet_Type_Bars.png" width=75% height=75%>
 
 > **Interpretation:**
 Subplot 1: Supermarket Type3 has the highest average item outlet sales. This indicates that this outlet type sells a higher volume of a given item than the other outlet types. Likewise, Grocery stores sell the lowest volume of any given item.
